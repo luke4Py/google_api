@@ -29,6 +29,20 @@ class gsheets():
         self.SAMPLE_SPREADSHEET_ID = Id
         
     def sheet_read(self,read_range):
+        """
+        
+
+        Parameters
+        ----------
+        read_range : str
+            read_range refers to the range of cells that are intended to scrape 
+            for reading.
+
+        Returns
+        -------
+        Returns the content in the cells from the range provided.
+
+        """
         self.SAMPLE_RANGE_NAME = read_range
         result = self.sheet.values().get(spreadsheetId=self.SAMPLE_SPREADSHEET_ID,
                     range=self.SAMPLE_RANGE_NAME).execute()
