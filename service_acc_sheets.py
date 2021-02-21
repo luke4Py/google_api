@@ -50,6 +50,21 @@ class gsheets():
         return(values)
     
     def sheet_write(self,values,write_range):
+        """
+        
+
+        Parameters
+        ----------
+        values : str
+            content to be written onto the sheets.
+        write_range : str
+            range of cells that are intended to be written with the content provided.
+
+        Returns
+        -------
+        None.
+
+        """
         self.wr = write_range
         self.vals = values
         request = self.sheet.values().update(spreadsheetId=self.SAMPLE_SPREADSHEET_ID, 
