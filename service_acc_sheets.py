@@ -5,6 +5,20 @@ from google.oauth2 import service_account
 class gsheets():
 
     def __init__(self,Id):
+        """
+        
+
+        Parameters
+        ----------
+        Id : str
+            ID represents the sheet Id that can be possibly noted down 
+            from the url when a google sheet is opened in the browser.
+
+        Returns
+        -------
+        None.
+
+        """
         service_account_file = 'credentials.json'
         SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
         credentials = None
